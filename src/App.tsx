@@ -7,7 +7,6 @@ import {
   TableHeader,
   TableRow,
 } from "./components/ui/table";
-import PlaceholderImage from "./assets/placeholder.png";
 
 type Product = {
   id: number;
@@ -21,77 +20,77 @@ function App() {
   const products = [
     {
       id: 12345,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Macarrão instantâneo Miojo",
       description: "Adjustable and comfortable office chair",
       category: "Alimentos",
     },
     {
       id: 12346,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Arroz",
       description: "Adjustable and comfortable office chair",
       category: "Alimentos",
     },
     {
       id: 12347,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Feijão",
       description: "Adjustable and comfortable office chair",
       category: "Alimentos",
     },
     {
       id: 12348,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Amaciante de roupas",
       description: "Adjustable and comfortable office chair",
       category: "Material de Limpeza",
     },
     {
       id: 12349,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Sabão em pó",
       description: "Adjustable and comfortable office chair",
       category: "Material de Limpeza",
     },
     {
       id: 12350,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Desinfetante",
       description: "Adjustable and comfortable office chair",
       category: "Material de Limpeza",
     },
     {
       id: 12351,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Água sanitária",
       description: "Adjustable and comfortable office chair",
       category: "Material de Limpeza",
     },
     {
       id: 12352,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Whisky",
       description: "Adjustable and comfortable office chair",
       category: "Bebidas",
     },
     {
       id: 12353,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Vodka",
       description: "Adjustable and comfortable office chair",
       category: "Bebidas",
     },
     {
       id: 12354,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Cerveja",
       description: "Adjustable and comfortable office chair",
       category: "Bebidas",
     },
     {
       id: 12355,
-      image: PlaceholderImage,
+      image: "https://www.svgrepo.com/show/508699/landscape-placeholder.svg",
       name: "Refrigerante",
       description: "Adjustable and comfortable office chair",
       category: "Bebidas",
@@ -129,7 +128,7 @@ function App() {
                       <TableRow key={product.id}>
                         <TableCell className="w-[15%]">
                           <img
-                            src={PlaceholderImage}
+                            src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
                             alt={product.name}
                             width={64}
                             height={64}
