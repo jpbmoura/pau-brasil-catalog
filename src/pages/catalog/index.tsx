@@ -55,7 +55,7 @@ const Catalog = () => {
                 </TableHeader>
                 <TableBody>
                   {groupedProducts[category].map((product: Product) => (
-                    <TableRow key={product.id}>
+                    <TableRow key={product.id} className="text-xs md:text-sm">
                       {/* <TableCell className="w-[15%]">
                       <img
                         src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
