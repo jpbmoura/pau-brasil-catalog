@@ -8,16 +8,13 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="flex flex-col justify-between h-screen">
       <Header />
-      <div className="max-w-3xl w-full m-auto px-10 md:px-0 md:pt-10">
+      <div className="max-w-3xl w-full m-auto px-10 md:px-0 ">
         <main>{children}</main>
       </div>
       <Footer />
-      {/* <Button className="h-12 bg-slate-600 fixed right-4 bottom-4">
-        <ShoppingBag className="w-full h-full" />
-      </Button> */}
-    </>
+    </div>
   );
 };
 
