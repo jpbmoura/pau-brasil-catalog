@@ -42,7 +42,7 @@ const Catalog = () => {
       {Object.keys(groupedProducts)
         .sort()
         .map((category) => (
-          <div id={category} key={category} className="mb-8">
+          <div id={category} key={category} className="mb-8 scroll-mt-48">
             <h2 className="text-2xl font-bold mb-4">{category}</h2>
             <div className="border rounded-lg overflow-hidden">
               <Table>
