@@ -6,7 +6,7 @@ import { Button } from "../../ui/button";
 const Header = () => {
   return (
     <header
-      className={`py-4 border-b bg-white sticky top-0 z-10 shadow-lg px-10 md:px-0`}
+      className={`py-4 border-b bg-white sticky top-0 z-10 shadow-md px-10 md:px-0`}
     >
       <div className="max-w-3xl m-auto flex items-center justify-between w-full">
         <a href="#" className="flex items-center gap-2">
