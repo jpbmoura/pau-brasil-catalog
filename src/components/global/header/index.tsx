@@ -2,6 +2,15 @@ import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
 import { ChatBubbleIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import Logo from "../../../assets/logo.png";
 import { Button } from "../../ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../../ui/sheet";
+import CategoriesSheet from "../../shared/categories-sheet";
 
 const Header = () => {
   return (
@@ -14,10 +23,24 @@ const Header = () => {
         </a>
 
         <div className="space-x-2">
-          <Button variant="outline">Categorias</Button>
+          <Sheet>
+            <SheetTrigger>
+              <Button variant="outline">Categorias</Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Nossas Categorias</SheetTitle>
+                <SheetDescription className="h-full">
+                  <div className="h-full">
+                    <CategoriesSheet />
+                  </div>
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
 
           <Popover>
-            <PopoverTrigger>
+            <PopoverTrigger className="hidden md:inline-flex">
               <a
                 href="#"
                 className="inline-flex h-9 items-center justify-center rounded-md bg-green-700 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"

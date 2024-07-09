@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -8,6 +9,7 @@ import {
 } from "../../components/ui/table";
 
 import { catalogMock } from "../../helpers/catalog-mock";
+import { useCategoriesStore } from "../../store/categoriesStore";
 
 type Product = {
   id?: number;
@@ -18,6 +20,8 @@ type Product = {
 };
 
 const Catalog = () => {
+  const { setCategories } = useCategoriesStore();
+
   const groupedProducts = catalogMock.reduce(
     (acc: Record<string, Product[]>, product: Product) => {
       if (!acc[product.category]) {
@@ -29,10 +33,14 @@ const Catalog = () => {
     {}
   );
 
+  useEffect(() => {
+    setCategories(Object.keys(groupedProducts));
+  }, []);
+
   return (
     <div className="w-full py-8">
       {Object.keys(groupedProducts).map((category) => (
-        <div key={category} className="mb-8">
+        <div id={category} key={category} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">{category}</h2>
           <div className="border rounded-lg overflow-hidden">
             <Table>
