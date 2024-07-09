@@ -8,7 +8,7 @@ const CategoriesSheet = () => {
     <div className="flex flex-grow flex-col">
       <ScrollArea className="overflow-y-auto h-[600px]">
         <div className="flex flex-col">
-          {categories.map((category, index) => (
+          {categories.sort().map((category, index) => (
             <a href={`#${category}`} key={index}>
               <span className="text-sm font-medium text-green-900 hover:text-green-600">
                 {category}
