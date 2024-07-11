@@ -1,5 +1,3 @@
-import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover";
-import { ChatBubbleIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import Logo from "../../../assets/logo.png";
 import { Button } from "../../ui/button";
 import {
