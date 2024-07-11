@@ -1,8 +1,7 @@
 import { InstagramLogoIcon } from "@radix-ui/react-icons";
 
 const InstagramButton = () => {
-  const instagramLink =
-    "https://www.instagram.com/paubrasilatacado?igsh=eDk4YXg2YnVmdmxp";
+  const instagramLink = "https://www.instagram.com/paubrasilatacado";
 
   return (
     <a
