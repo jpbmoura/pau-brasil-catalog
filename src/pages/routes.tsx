@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "../components/global/layout";
 import Catalog from "./catalog";
 import Admin from "./admin";
-import InstagramButton from "../components/shared/instagram-button";
+import SocialButton from "../components/shared/social-button";
 
 export const AppRoutes = () => {
   const router = createBrowserRouter([
@@ -22,7 +22,7 @@ export const AppRoutes = () => {
 
   return (
     <>
-      <InstagramButton />
+      <SocialButton />
       <Layout>
         <RouterProvider router={router} />
       </Layout>
