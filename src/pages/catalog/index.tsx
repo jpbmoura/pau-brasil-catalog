@@ -38,25 +38,26 @@ const Catalog = () => {
   }, []);
 
   return (
-    <div className="w-full py-8">
-      {Object.keys(groupedProducts)
-        .sort()
-        .map((category) => (
-          <div id={category} key={category} className="mb-8 scroll-mt-48">
-            <h2 className="text-2xl font-bold mb-4">{category}</h2>
-            <div className="border rounded-lg overflow-hidden">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    {/* <TableHead className="text-center">Produto</TableHead> */}
-                    <TableHead>Produto</TableHead>
-                    <TableHead className="text-center">Código</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {groupedProducts[category].map((product: Product) => (
-                    <TableRow key={product.id} className="text-xs md:text-sm">
-                      {/* <TableCell className="w-[15%]">
+    <>
+      <div className="w-full py-8">
+        {Object.keys(groupedProducts)
+          .sort()
+          .map((category) => (
+            <div id={category} key={category} className="mb-8 scroll-mt-48">
+              <h2 className="text-2xl font-bold mb-4">{category}</h2>
+              <div className="border rounded-lg overflow-hidden">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      {/* <TableHead className="text-center">Produto</TableHead> */}
+                      <TableHead>Produto</TableHead>
+                      <TableHead className="text-center">Código</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {groupedProducts[category].map((product: Product) => (
+                      <TableRow key={product.id} className="text-xs md:text-sm">
+                        {/* <TableCell className="w-[15%]">
                       <img
                         src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
                         alt={product.name}
@@ -65,20 +66,21 @@ const Catalog = () => {
                         className="rounded-md object-cover m-auto"
                       />
                     </TableCell> */}
-                      <TableCell className="font-medium">
-                        {product.description}
-                      </TableCell>
-                      <TableCell className="font-medium w-[15%] text-center ">
-                        {product.id}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+                        <TableCell className="font-medium">
+                          {product.description}
+                        </TableCell>
+                        <TableCell className="font-medium w-[15%] text-center ">
+                          {product.id}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </div>
             </div>
-          </div>
-        ))}
-    </div>
+          ))}
+      </div>
+    </>
   );
 };
 
